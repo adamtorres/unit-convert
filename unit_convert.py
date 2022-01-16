@@ -13,6 +13,7 @@ class Unit:
     Distance = 1
     Time = 3
     Mass = 4
+    Volume = 5
 
 
 class UnitConvert(object):
@@ -203,9 +204,11 @@ class UnitConvert(object):
         },
         'oz': {
             Unit.Mass: 28.349523,
+            Unit.Volume: 6,
         },
         'ounces': {
             Unit.Mass: 28.349523,
+            Unit.Volume: 6,
         },
         'lbs': {
             Unit.Mass: 453.59237,
@@ -227,6 +230,43 @@ class UnitConvert(object):
         },
         'stones': {
             Unit.Mass: 6350.29318,
+        },
+
+        'tsp': {
+            Unit.Volume: 1,
+        },
+        'teaspoons': {
+            Unit.Volume: 1,
+        },
+        'tbsp': {
+            Unit.Volume: 3,
+        },
+        'tablespoons': {
+            Unit.Volume: 3,
+        },
+        'c': {
+            Unit.Volume: 48,
+        },
+        'cups': {
+            Unit.Volume: 48,
+        },
+        'pt': {
+            Unit.Volume: 96,
+        },
+        'pints': {
+            Unit.Volume: 96,
+        },
+        'qt': {
+            Unit.Volume: 192,
+        },
+        'quarts': {
+            Unit.Volume: 192,
+        },
+        'gal': {
+            Unit.Volume: 768,
+        },
+        'gallons': {
+            Unit.Volume: 768,
         },
     }
 
