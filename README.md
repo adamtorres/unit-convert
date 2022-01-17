@@ -1,7 +1,7 @@
 # unit-convert
 Easily convert units to different quantities.
 
-For conveniance, abbreviations are accepted, where an attempt will be made to calculate the type based on the other inputs (eg. "m" can evaluate as either "minute" or "metre").
+For convenience, abbreviations are accepted, where an attempt will be made to calculate the type based on the other inputs (eg. "m" can evaluate as either "minute" or "metre").
 
 ## Example Usage
 ```python
@@ -28,4 +28,4 @@ For conveniance, abbreviations are accepted, where an attempt will be made to ca
 32294.98677
 ```
 
-Data, time, distance and mass are currently supported.
+Data, time, distance, mass, and volume are currently supported.
