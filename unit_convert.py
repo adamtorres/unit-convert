@@ -268,6 +268,51 @@ class UnitConvert(object):
         'gallons': {
             Unit.Volume: 768,
         },
+        'ml': {
+            Unit.Volume: 0.20288413535352,
+        },
+        'milliliters': {
+            Unit.Volume: 0.20288413535352,
+        },
+        'millilitres': {
+            Unit.Volume: 0.20288413535352,
+        },
+        'cl': {
+            Unit.Volume: 2.0288413535352,
+        },
+        'centiliters': {
+            Unit.Volume: 2.0288413535352,
+        },
+        'centilitres': {
+            Unit.Volume: 2.0288413535352,
+        },
+        'dl': {
+            Unit.Volume: 20.288413535352,
+        },
+        'deciliters': {
+            Unit.Volume: 20.288413535352,
+        },
+        'decilitres': {
+            Unit.Volume: 20.288413535352,
+        },
+        'l': {
+            Unit.Volume: 202.88413535352,
+        },
+        'liters': {
+            Unit.Volume: 202.88413535352,
+        },
+        'litres': {
+            Unit.Volume: 202.88413535352,
+        },
+        'kl': {
+            Unit.Volume: 202884.13535352,
+        },
+        'kiloliters': {
+            Unit.Volume: 202884.13535352,
+        },
+        'kilolitres': {
+            Unit.Volume: 202884.13535352,
+        },
     }
 
     def __init__(self, **kwargs):
