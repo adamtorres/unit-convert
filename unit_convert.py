@@ -187,7 +187,7 @@ class UnitConvert(object):
         'decades': {
             Unit.Time: 315360000,
         },
-        'centurys': {
+        'centuries': {
             Unit.Time: 3153600000,
         },
         'g': {
@@ -197,10 +197,10 @@ class UnitConvert(object):
             Unit.Mass: 1,
         },
         'kg': {
-            Unit.Mass: 10000,
+            Unit.Mass: 1000,
         },
         'kilograms': {
-            Unit.Mass: 10000,
+            Unit.Mass: 1000,
         },
         'oz': {
             Unit.Mass: 28.349523,
@@ -220,11 +220,14 @@ class UnitConvert(object):
             Unit.Mass: 1000000,
         },
         'tons': {
+            # A 'ton' is a North American short ton (907.18474 kg or 2,000 lbs).
             Unit.Mass: 907185,
         },
         'tonnes': {
+            # A 'metric ton' is a tonne (1,000 kg or 2,204.6 lbs)
             Unit.Mass: 1000000,
         },
+        # An 'imperial ton' is a British long ton (1,016.047 kg or 2,240 lbs).
         'st': {
             Unit.Mass: 6350.29318,
         },
