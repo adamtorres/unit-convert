@@ -6,6 +6,7 @@ from __future__ import division
 __version__ = '1.0.0'
 
 from collections import defaultdict
+import re
 
 
 class Unit:
@@ -203,25 +204,25 @@ class UnitConvert(object):
             Unit.Mass: 1000,
         },
         'oz': {
-            Unit.Mass: 28.349523,
+            Unit.Mass: 28.34952312,
             Unit.Volume: 6,
         },
         'ounces': {
-            Unit.Mass: 28.349523,
+            Unit.Mass: 28.34952312,
             Unit.Volume: 6,
         },
         'lbs': {
-            Unit.Mass: 453.59237,
+            Unit.Mass: 453.59236992,
         },
         'pounds': {
-            Unit.Mass: 453.59237,
+            Unit.Mass: 453.59236992,
         },
         't': {
             Unit.Mass: 1000000,
         },
         'tons': {
-            # A 'ton' is a North American short ton (907.18474 kg or 2,000 lbs).
-            Unit.Mass: 907185,
+            # A 'ton' is a North American short ton (907.18475 kg or 2,000 lbs).
+            Unit.Mass: 907184.736,
         },
         'tonnes': {
             # A 'metric ton' is a tonne (1,000 kg or 2,204.6 lbs)
@@ -369,3 +370,14 @@ class UnitConvert(object):
         original_value = self._totals[unit]
         multiplier = self.Data[attr][unit]
         return original_value / multiplier
+
+
+def from_string(value_and_unit):
+    """
+    Very simplistic way to convert a string, "6.4kg", to a UnitConvert object which can then be used to do conversions.
+    :param value_and_unit: String starting with a number and ending with unit.  Can have a space between the two.
+    Leading and trailing spaces will be stripped.  Thousands separators and not handled.  Comma or period for decimal.
+    :return: UnitConvert object with the passed in value set.
+    """
+    m = re.search(r"^(?P<value>-?[0-9.,]+)\s?(?P<unit>[a-z]+)$", value_and_unit.lower().strip())
+    return UnitConvert(**{m.group('unit'): float(m.group('value'))})
